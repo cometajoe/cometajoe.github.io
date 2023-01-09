@@ -100,8 +100,10 @@
         console.log(name, email, message)
 
             Email.send({
-                SecureToken : "C973D7AD-F097-4B95-91F4-40ABC5567812",
-                To: 'cardenasg.cruz@gmail.com',
+                Host: "smtp.elasticemail.com",
+                Username: "balmori.02@gmail.com",
+                Password: "353803519F06AA32E83B1E91F85FD08542D1",
+                To: 'cardenasgcruz@yopmail.com',
                 From: "balmori.02@gmail.com",
                 Subject: "Sending Email using javascript",
                 Body: "<html><h2>"+ name +"</h2><strong>"+ email +"</strong><br></br><em>"+ message +"</em></html>",
