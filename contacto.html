@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cometa Joe</title>
+</head>
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</script>
+
+<body>
+
+    <body>
+        <div class="page">
+
+            <section class="container">
+                <nav class="navbar">
+                    <div class="navbar__content">
+                        <img src="img/comet.png" alt="cometaJoe">
+                        <ul>
+                            <li><a href="./index.html">HOLA</a></li>
+                            <li><a href="./courses.html">CURSOS</a></li>
+                            <li><a href="./blog.html">BLOG</a></li>
+                            <li><a href="./contacto.html">CLASE GRATIS</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <section class="main-content">
+                    <div class="wrapper">
+                        <form class="form" id="registrarForm">
+                            <div class="pageTitle title">¡Agenda una clase gratis! </div>
+                            <input type="text" class="name formEntry" placeholder="Nombre" id="name" required="required">
+                            <input type="text" class="email formEntry" placeholder="Email" id="email" required="required">
+                            <textarea class="message formEntry" placeholder="Mensaje" id="comment"></textarea>
+
+                            <button class="submit formEntry" id="registrar">Registrarse</button>
+                        </form>
+                    </div>
+                </section>
+                <section class="side-content">
+                    <div class="sidefoot"></div>
+                    <p></p>
+                    <img src="img/comet.png" alt="joe">
+
+
+                </section>
+                <section class="footer">
+                    <div>
+                        <img src="img/joe_dance.png" alt="maman">
+                    </div>
+                    <div>
+                        <img src="img/joe_adventure.png" alt="robin">
+                    </div>
+                    <div>
+                        <img src="img/joe_happy.png" alt="spidy">
+                    </div>
+                </section>
+            </section>
+
+            <section class="loader">
+                <div></div>
+                <div></div>
+                <div></div>
+            </section>
+
+            <section></section>
+        </div>
+    </body>
+    <script type="text/javascript">
+        const registrar = document.getElementById("registrar");      
+        registrar.addEventListener("click", CheckValidation, false);
+       
+
+        function CheckValidation()
+        {
+
+            var isValidForm = document.forms['registrarForm'].checkValidity();
+            if (isValidForm)
+            {
+                sendEmail();
+            }
+            else
+            {
+
+                return false;
+            }
+
+        }
+
+        function sendEmail() {           
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("comment").value;
+
+        console.log(name, email, message)
+
+            // Email.send({
+            //     Host: "smtp.elasticemail.com",
+            //     Username: "balmori.02@gmail.com",
+            //     Password: "353803519F06AA32E83B1E91F85FD08542D1",
+            //     To: 'cardenasgcruz@yopmail.com',
+            //     From: "balmori.02@gmail.com",
+            //     Subject: "Sending Email using javascript",
+            //     Body: "Well that was easy!!",
+            // })
+            //     .then(function (message) {
+            //         alert("mail sent successfully")
+            //     });
+        
+
+        e.preventDefault();
+        }
+    </script>
+</body>
+
+</html>
