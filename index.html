@@ -8,6 +8,13 @@
   <title>Documentary Landing Page</title>
   <link rel="stylesheet" href="css/locomotive-scroll.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap"
+    rel="stylesheet">
   <style>
     /* Basic styling */
     body,
@@ -43,6 +50,10 @@
       transition: opacity 1.2s ease-out, transform 1.2s ease-out;
     }
 
+    section>h2 {
+      padding: 0 35px 0 35px;
+      font-family: 'Quicksand', sans-serif;
+    }
 
     /* Animated state of text when in viewport */
     .text-animate.visible {
@@ -88,8 +99,7 @@
     <section id="section1" data-scroll-section>
 
       <div class="component-container component-cover component-container--overlay">
-        <div class="component-container component-cover"
-          style="background-image: url('./img/slide1_1.jpeg');">
+        <div class="component-container component-cover" style="background-image: url('./img/slide1.jpeg');">
 
         </div>
       </div>
@@ -99,7 +109,7 @@
     </section>
     <section id="section2" data-scroll-section>
       <div class="component-container component-cover component-container--overlay">
-        <div class="component-container component-cover" style="background-image: url('img/slide2.jpg');">
+        <div class="component-container component-cover" style="background-image: url('img/slide2.png');">
 
         </div>
       </div>
@@ -111,7 +121,7 @@
     </section>
     <section id="section3" data-scroll-section>
       <div class="component-container component-cover component-container--overlay">
-        <div class="component-container component-cover" style="background-image: url('img/slide3.jpg');">
+        <div class="component-container component-cover" style="background-image: url('./img/slide3.png">
 
         </div>
       </div>
