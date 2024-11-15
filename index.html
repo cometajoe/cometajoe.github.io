@@ -2,69 +2,238 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Cometa Joe</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Documentary Landing Page</title>
+  <link rel="stylesheet" href="css/locomotive-scroll.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <style>
+    /* Basic styling */
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    /* .container {
+      position: relative;
+      overflow: hidden;
+      height: 100vh;
+    } */
+
+    section {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      color: #fff;
+      flex-direction: column;
+      text-align: center;
+
+    }
+
+
+    /* Initial state of text (hidden) */
+    .text-animate {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+    }
+
+
+    /* Animated state of text when in viewport */
+    .text-animate.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .component-cover {
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .component-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      transition: opacity 3.5s cubic-bezier(.19, .78, .59, 1.01);
+    }
+
+    .component-container--overlay:after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, .54);
+
+    }
+  </style>
 </head>
 
 <body>
+  <!-- Main container -->
+  <div class="container" data-scroll-container>
 
-    <body>
-        <div class="page">
 
-            <section class="container">
-                <nav class="navbar">
-                    <div class="navbar__content">
-                        <img src="img/comet.png" alt="cometaJoe">
-                        <ul>
-                            <li><a href="./index.html">HOLA</a></li>
-                            <li><a href="./courses.html">CURSOS</a></li>
-                            <li><a href="./blog.html">BLOG</a></li>
-                            <li><a href="./contacto.html">CLASE GRATIS</a></li>
-                        </ul>
-                    </div>
-                </nav>
-                <section class="main-content">
-                    <p>Descubre tu</p>
-                    <h1>superpoder!</h1>
-                    <p>En <strong>Cometa Joe</strong>  estamos convencidos de que los niños y las niñas tienen un <strong>superpoder</strong> para crear  historias,
-                        juegos, o todo aquello que puedan imaginar.
-                        <br>
-                        <br>
-                        Creamos ambientes seguros para que ellos puedan desarrollar su talento a través de la <strong>programación</strong>. Aprenden jugando, resuelven problemas 
-                        de manera creativa y se preparan para las competencias de este milenio.
-                    </p>
-                </section>
-                <section class="side-content">    
-                    <div class="sidefoot"></div>       
-                    <p></p>             
-                   <img src="img/comet.png" alt="joe">
-                    
-                               
-                </section>
-                <section class="footer">
-                    <div>
-                        <img src="img/joe_dance.png" alt="maman">
-                    </div>
-                    <div>
-                        <img src="img/joe_adventure.png" alt="robin">
-                    </div>
-                    <div>
-                        <img src="img/joe_happy.png" alt="spidy">
-                    </div>
-                </section>
-            </section>
+    <!-- Sections to scroll through -->
+    <section id="section1" data-scroll-section>
 
-            <section class="loader">
-                <div></div>
-                <div></div>
-                <div></div>
-            </section>
-          
+      <div class="component-container component-cover component-container--overlay">
+        <div class="component-container component-cover" style="background-image: url('img/slide1.jpg');">
+
         </div>
-    </body>
+      </div>
+      <h2 data-scroll data-scroll-speed="2" class="text-animate" data-scroll data-scroll-class="visible">Para recordar
+        el paraíso de Cancún
+        antes de que lo hicieran paraíso</h2>
+    </section>
+    <section id="section2" data-scroll-section>
+      <div class="component-container component-cover component-container--overlay">
+        <div class="component-container component-cover" style="background-image: url('img/slide2.jpg');">
+
+        </div>
+      </div>
+      <img src="img/kaankun.png" alt="Kaan Kun Documental La Salle" style="width: 30%;">
+      <h2 class="text-animate" data-scroll data-scroll-speed="2" data-scroll-class="visible">Antes de que Cancún se
+        convirtiera en el vibrante epicentro turístico internacional que conocemos
+      </h2>
+
+    </section>
+    <section id="section3" data-scroll-section>
+      <div class="component-container component-cover component-container--overlay">
+        <div class="component-container component-cover" style="background-image: url('img/slide3.jpg');">
+
+        </div>
+      </div>
+      <h2 class="text-animate" data-scroll data-scroll-speed="2" data-scroll-class="visible">Imagina un lugar donde el sonido del mar y el canto de las aves se mezclan con el murmullo de la selva. Así era Cancún en sus inicios, un territorio inexplorado y lleno de posibilidades. 
+
+      </h2>
+    </section>
+    <section id="section4" data-scroll-section>
+      <div class="component-container component-cover component-container--overlay">
+        <div class="component-container component-cover" style="background-image: url('img/slide4.jpg');">
+
+        </div>
+      </div>
+      <h2 class="text-animate" data-scroll data-scroll-speed="2" data-scroll-class="visible">
+      </h2>
+    </section>
+    <section id="section5" data-scroll-section>
+      <div class="component-container component-cover component-container--overlay">
+        <div class="component-container component-cover" style="background-image: url('img/slide5.jpg');">
+
+        </div>
+      </div>
+      <h2 class="text-animate" data-scroll data-scroll-speed="2" data-scroll-class="visible">¿Qué significa Cancún para el resto del mundo? Para muchos, un destino paradisíaco; noches de fiesta interminables y algunas las playas más hermosas de México. ¿Qué pensarías si te dijera que detrás de ese nombre, hay una historia que comenzó mucho antes de los resorts y las playas atestadas de gente? 
+      </h2>
+    </section>
+    <section id="section6" data-scroll-section>
+      <div class="component-container component-cover component-container--overlay">
+        <div class="component-container component-cover" style="background-image: url('img/slide6.jpg');">
+
+        </div>
+      </div>
+      <h2 class="text-animate" data-scroll data-scroll-speed="2" data-scroll-class="visible">Hoy, entre los modernos hoteles y las avenidas transitadas, aún se pueden escuchar los ecos de aquel Cancún que ya no existe. Voces que nos cuentan cómo era vivir en estas tierras, cuando las aguas cristalinas no eran el atractivo principal, sino el sustento de una comunidad que crecía con el mar y la selva. Un lugar que, con el tiempo, cambiaría para siempre. 
+      </h2>
+    </section>
+    <section id="section7" data-scroll-section>
+      <div class="component-container component-cover component-container--overlay">
+        <div class="component-container component-cover" style="background-image: url('img/slide7.jpg');">
+
+        </div>
+      </div>
+      <h2 class="text-animate" data-scroll data-scroll-speed="2" data-scroll-class="visible">Pero ¿qué se perdió en esa transformación? ¿Qué quedó de aquel pequeño pueblo pesquero, enterrado bajo el peso del turismo? Mientras el sol baña las arenas blancas, las memorias de los primeros habitantes sobreviven, y con ellas, una historia que merece ser contada. 
+
+      </h2>
+    </section>
+    <section id="section8" data-scroll-section>
+      <div class="component-container component-cover component-container--overlay">
+        <div class="component-container component-cover" style="background-image: url('img/slide8.jpg');">
+
+        </div>
+      </div>
+      <h1 data-scroll-speed="2">Discover the Story</h1>
+    </section>
+    <section id="section9" data-scroll-section>
+      <div class="component-container component-cover component-container--overlay">
+        <div class="component-container component-cover" style="background-image: url('img/slide9.jpg');">
+
+        </div>
+      </div>
+      <h1 data-scroll-speed="-1">Listen to the Sounds</h1>
+    </section>
+    <section id="section10" data-scroll-section>
+      <div class="component-container component-cover component-container--overlay">
+        <div class="component-container component-cover" style="background-image: url('img/slide10.jpg');">
+
+        </div>
+      </div>
+      <h1 data-scroll data-scroll-speed="4">Welcome to the Documentary</h1>
+    </section>
+    <!-- <section id="section11" data-scroll-section>
+      <h1 data-scroll-speed="2">Discover the Story</h1>
+    </section>
+    <section id="section12" data-scroll-section>
+      <h1 data-scroll-speed="-1">Listen to the Sounds</h1>
+    </section> -->
+  </div>
+
+  <!-- Locomotive Scroll and Howler.js libraries -->
+  <script src="js/locomotive-scroll.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+
+  <script>
+    // Initialize Locomotive Scroll
+    (function () {
+      const scroll = new LocomotiveScroll({
+        el: document.querySelector('[data-scroll-container]'),
+        smooth: true,
+        multiplier: .7,
+        mobile: {
+          smooth: true
+        },
+        tablet: {
+          smooth: true
+        }
+      });
+
+      // Select the progress indicator element
+      const progressIndicator = document.querySelector('.progress-indicator');
+
+      window.addEventListener('scroll', () => {
+        // Calculate the scroll progress
+        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPosition = window.scrollY;
+        const progress = (scrollPosition / scrollHeight) * 100;
+
+        // Update the height of the progress indicator
+        progressIndicator.style.height = progress + '%';
+      });
+
+
+    })();
+
+
+    // // Play audio when reaching specific sections
+    // scroll.on('scroll', (event) => {
+    //   if (event.scroll.y > document.querySelector('#section2').offsetTop) {
+    //     if (!sound.playing()) {
+    //       sound.play();
+    //     }
+    //   } else {
+    //     sound.stop();
+    //   }
+    // });
+  </script>
 </body>
 
 </html>
