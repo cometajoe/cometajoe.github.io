@@ -121,7 +121,7 @@
     </section>
     <section id="section3" data-scroll-section>
       <div class="component-container component-cover component-container--overlay">
-        <div class="component-container component-cover" style="background-image: url('./img/slide3.png">
+        <div class="component-container component-cover" style="background-image: url('./img/slide3.png')">
 
         </div>
       </div>
@@ -133,7 +133,7 @@
     </section>
     <section id="section4" data-scroll-section>
       <div class="component-container component-cover component-container--overlay">
-        <div class="component-container component-cover" style="background-image: url('img/slide4.jpg');">
+        <div class="component-container component-cover" style="background-image: url('./img/slide4.png');">
 
         </div>
       </div>
@@ -142,7 +142,7 @@
     </section>
     <section id="section5" data-scroll-section>
       <div class="component-container component-cover component-container--overlay">
-        <div class="component-container component-cover" style="background-image: url('img/slide5.jpg');">
+        <div class="component-container component-cover" style="background-image: url('./img/slide5.png');">
 
         </div>
       </div>
@@ -154,7 +154,7 @@
     </section>
     <section id="section6" data-scroll-section>
       <div class="component-container component-cover component-container--overlay">
-        <div class="component-container component-cover" style="background-image: url('img/slide6.jpg');">
+        <div class="component-container component-cover" style="background-image: url('./img/slide6.png');">
 
         </div>
       </div>
@@ -167,7 +167,7 @@
     </section>
     <section id="section7" data-scroll-section>
       <div class="component-container component-cover component-container--overlay">
-        <div class="component-container component-cover" style="background-image: url('img/slide7.jpg');">
+        <div class="component-container component-cover" style="background-image: url('./img/slide7.png');">
 
         </div>
       </div>
@@ -180,7 +180,7 @@
     </section>
     <section id="section8" data-scroll-section>
       <div class="component-container component-cover component-container--overlay">
-        <div class="component-container component-cover" style="background-image: url('img/slide8.jpg');">
+        <div class="component-container component-cover" style="background-image: url('./img/slide8.png');">
 
         </div>
       </div>
@@ -188,7 +188,7 @@
     </section>
     <section id="section9" data-scroll-section>
       <div class="component-container component-cover component-container--overlay">
-        <div class="component-container component-cover" style="background-image: url('img/slide9.jpg');">
+        <div class="component-container component-cover" style="background-image: url('./img/slide9.png');">
 
         </div>
       </div>
@@ -196,7 +196,7 @@
     </section>
     <section id="section10" data-scroll-section>
       <div class="component-container component-cover component-container--overlay">
-        <div class="component-container component-cover" style="background-image: url('img/slide10.jpg');">
+        <div class="component-container component-cover" style="background-image: url('./img/slide10.png');">
 
         </div>
       </div>
@@ -230,20 +230,43 @@
         }
       });
 
+      // // Play audio when reaching specific sections
+      // scroll.on('scroll', (event) => {
+      //   if (event.scroll.y > document.querySelector('#section2').offsetTop) {
+      //     if (!sound.playing()) {
+      //       sound.play();
+      //     }
+      //   } else {
+      //     sound.stop();
+      //   }
+      // });
+      const backgroundMusic = new Howl({
+        src: ['./img/sea-waves-169411.mp3'], // Adjust the path based on your folder structure
+        loop: true,   // Enable looping if you want the audio to play continuously
+        volume: 0.5   // Set the initial volume (0.0 to 1.0)
+      });
+      let isPlaying = false; // Flag to track if audio is currently playing
+
+      window.addEventListener('scroll', () => {
+        const scrollPosition = window.scrollY;
+
+        // Play audio when the user scrolls down
+        if (scrollPosition > 0 && !isPlaying) {
+          scrollAudio.play();
+          isPlaying = true;
+        }
+
+        // Pause audio if the user scrolls back up to the top
+        if (scrollPosition === 0 && isPlaying) {
+          scrollAudio.pause();
+          isPlaying = false;
+        }
+      });
 
     })();
 
 
-    // // Play audio when reaching specific sections
-    // scroll.on('scroll', (event) => {
-    //   if (event.scroll.y > document.querySelector('#section2').offsetTop) {
-    //     if (!sound.playing()) {
-    //       sound.play();
-    //     }
-    //   } else {
-    //     sound.stop();
-    //   }
-    // });
+
   </script>
 </body>
 
