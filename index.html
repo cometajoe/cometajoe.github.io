@@ -247,19 +247,24 @@
       });
       let isPlaying = false; // Flag to track if audio is currently playing
 
-      window.addEventListener('scroll', () => {
-        const scrollPosition = window.scrollY;
+   
+      let hasUserInteracted = false; // Track if the user has interacted
 
-        // Play audio when the user scrolls down
-        if (scrollPosition > 0 && !isPlaying) {
+      // Start audio only after a user interaction (click or touch)
+      const enableAudio = () => {
+        hasUserInteracted = true;
+        document.removeEventListener('click', enableAudio); // Remove listener after first interaction
+        document.removeEventListener('touchstart', enableAudio);
+      };
+
+      document.addEventListener('click', enableAudio);
+      document.addEventListener('touchstart', enableAudio);
+
+      // Play audio on scroll after user interaction
+      window.addEventListener('scroll', () => {
+        if (hasUserInteracted && !isPlaying) {
           scrollAudio.play();
           isPlaying = true;
-        }
-
-        // Pause audio if the user scrolls back up to the top
-        if (scrollPosition === 0 && isPlaying) {
-          scrollAudio.pause();
-          isPlaying = false;
         }
       });
 
