@@ -88,7 +88,8 @@
     <section id="section1" data-scroll-section>
 
       <div class="component-container component-cover component-container--overlay">
-        <div class="component-container component-cover" style="background-image: url('https://github.com/cometajoe/cometajoe.github.io/blob/main/img/slide1.JPG');">
+        <div class="component-container component-cover"
+          style="background-image: url('https://github.com/cometajoe/cometajoe.github.io/blob/main/img/slide1.JPG');">
 
         </div>
       </div>
@@ -114,7 +115,9 @@
 
         </div>
       </div>
-      <h2 class="text-animate" data-scroll data-scroll-speed="2" data-scroll-class="visible">Imagina un lugar donde el sonido del mar y el canto de las aves se mezclan con el murmullo de la selva. Así era Cancún en sus inicios, un territorio inexplorado y lleno de posibilidades. 
+      <h2 class="text-animate" data-scroll data-scroll-speed="2" data-scroll-class="visible">Imagina un lugar donde el
+        sonido del mar y el canto de las aves se mezclan con el murmullo de la selva. Así era Cancún en sus inicios, un
+        territorio inexplorado y lleno de posibilidades.
 
       </h2>
     </section>
@@ -133,7 +136,10 @@
 
         </div>
       </div>
-      <h2 class="text-animate" data-scroll data-scroll-speed="2" data-scroll-class="visible">¿Qué significa Cancún para el resto del mundo? Para muchos, un destino paradisíaco; noches de fiesta interminables y algunas las playas más hermosas de México. ¿Qué pensarías si te dijera que detrás de ese nombre, hay una historia que comenzó mucho antes de los resorts y las playas atestadas de gente? 
+      <h2 class="text-animate" data-scroll data-scroll-speed="2" data-scroll-class="visible">¿Qué significa Cancún para
+        el resto del mundo? Para muchos, un destino paradisíaco; noches de fiesta interminables y algunas las playas más
+        hermosas de México. ¿Qué pensarías si te dijera que detrás de ese nombre, hay una historia que comenzó mucho
+        antes de los resorts y las playas atestadas de gente?
       </h2>
     </section>
     <section id="section6" data-scroll-section>
@@ -142,7 +148,11 @@
 
         </div>
       </div>
-      <h2 class="text-animate" data-scroll data-scroll-speed="2" data-scroll-class="visible">Hoy, entre los modernos hoteles y las avenidas transitadas, aún se pueden escuchar los ecos de aquel Cancún que ya no existe. Voces que nos cuentan cómo era vivir en estas tierras, cuando las aguas cristalinas no eran el atractivo principal, sino el sustento de una comunidad que crecía con el mar y la selva. Un lugar que, con el tiempo, cambiaría para siempre. 
+      <h2 class="text-animate" data-scroll data-scroll-speed="2" data-scroll-class="visible">Hoy, entre los modernos
+        hoteles y las avenidas transitadas, aún se pueden escuchar los ecos de aquel Cancún que ya no existe. Voces que
+        nos cuentan cómo era vivir en estas tierras, cuando las aguas cristalinas no eran el atractivo principal, sino
+        el sustento de una comunidad que crecía con el mar y la selva. Un lugar que, con el tiempo, cambiaría para
+        siempre.
       </h2>
     </section>
     <section id="section7" data-scroll-section>
@@ -151,7 +161,10 @@
 
         </div>
       </div>
-      <h2 class="text-animate" data-scroll data-scroll-speed="2" data-scroll-class="visible">Pero ¿qué se perdió en esa transformación? ¿Qué quedó de aquel pequeño pueblo pesquero, enterrado bajo el peso del turismo? Mientras el sol baña las arenas blancas, las memorias de los primeros habitantes sobreviven, y con ellas, una historia que merece ser contada. 
+      <h2 class="text-animate" data-scroll data-scroll-speed="2" data-scroll-class="visible">Pero ¿qué se perdió en esa
+        transformación? ¿Qué quedó de aquel pequeño pueblo pesquero, enterrado bajo el peso del turismo? Mientras el sol
+        baña las arenas blancas, las memorias de los primeros habitantes sobreviven, y con ellas, una historia que
+        merece ser contada.
 
       </h2>
     </section>
@@ -198,13 +211,14 @@
         el: document.querySelector('[data-scroll-container]'),
         smooth: true,
         multiplier: .7,
-        mobile: {
+        tablet: {
+          breakpoint: 1024,
           smooth: true
         },
-        tablet: {
-          smooth: true
+        smartphone: {
+          breakpoint: 767
         }
-      });     
+      });
 
 
     })();
