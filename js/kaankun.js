@@ -11,18 +11,22 @@
     //     breakpoint: 767
     //   }
     // });
+    // Initialize Lenis
     const lenis = new Lenis({
-        duration: 1.2, // Adjust scroll smoothness
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Custom easing
-    })
+        duration: 1.2, // Controls smoothness (default: 1.2)
+        easing: (t) => t, // Linear easing function
+        smoothWheel: true, // Smooth scrolling with the mouse wheel
+        smoothTouch: true, // Smooth scrolling for touch devices
+        touchMultiplier: 2, // Speed multiplier for touch gestures
+    });
 
-    // Update Lenis on every animation frame
+    // Animation frame loop
     function raf(time) {
-        lenis.raf(time)
-        requestAnimationFrame(raf)
+        lenis.raf(time);
+        requestAnimationFrame(raf);
     }
 
-    requestAnimationFrame(raf)
+    requestAnimationFrame(raf);
     // Activar GSAP y ScrollTrigger
     gsap.registerPlugin(ScrollTrigger);
     // // Play audio when reaching specific sections
@@ -53,6 +57,15 @@
                 },
             }
         );
+    });
+
+
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            lenis.update(); // Update Lenis layout
+        }, 250);
     });
 
     // const backgroundMusic = new Howl({

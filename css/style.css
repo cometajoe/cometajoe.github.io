@@ -3,8 +3,14 @@
  html {
      margin: 0;
      padding: 0;
-     overflow: hidden;
+     overflow: hidden; /* Lenis handles scrolling */
+     -webkit-overflow-scrolling: touch; /* iOS smooth scroll fallback */
  }
+
+ body {
+    touch-action: pan-y; /* Enable smooth vertical scrolling */
+    overscroll-behavior: none; /* Prevent bounce effects */
+  }
 
  /* .container {
    position: relative;
