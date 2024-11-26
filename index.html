@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Documentary Landing Page</title>
-  <link rel="stylesheet" href="css/locomotive-scroll.css">
+  <!-- <link rel="stylesheet" href="css/locomotive-scroll.css"> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,79 +15,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap"
     rel="stylesheet">
-  <style>
-    /* Basic styling */
-    body,
-    html {
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-    }
-
-    /* .container {
-      position: relative;
-      overflow: hidden;
-      height: 100vh;
-    } */
-
-    section {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 2rem;
-      color: #fff;
-      flex-direction: column;
-      text-align: center;
-
-    }
-
-
-    /* Initial state of text (hidden) */
-    .text-animate {
-      opacity: 0;
-      transform: translateY(50px);
-      transition: opacity 1.2s ease-out, transform 1.2s ease-out;
-    }
-
-    section>h2 {
-      padding: 0 35px 0 35px;
-      font-family: 'Quicksand', sans-serif;
-    }
-
-    /* Animated state of text when in viewport */
-    .text-animate.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .component-cover {
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-
-    .component-container {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1;
-      transition: opacity 3.5s cubic-bezier(.19, .78, .59, 1.01);
-    }
-
-    .component-container--overlay:after {
-      content: "";
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background: rgba(0, 0, 0, .54);
-
-    }
-  </style>
+   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -109,11 +37,11 @@
     </section>
     <section id="section2" data-scroll-section>
       <div class="component-container component-cover component-container--overlay">
-        <div class="component-container component-cover" style="background-image: url('img/slide2.png');">
+        <div class="component-container component-cover" style="background-image: url('img/slide2.jpeg');">
 
         </div>
       </div>
-      <img src="img/kaankun.png" alt="Kaan Kun Documental La Salle" style="width: 30%;">
+      <img src="img/kaankun.png" alt="Kaan Kun Documental La Salle" style="position:absolute; top: 10px; left: 20px; width: 30%; z-index: 1;">
       <h2 class="text-animate" data-scroll data-scroll-speed="2" data-scroll-class="visible">Antes de que Cancún se
         convirtiera en el vibrante epicentro turístico internacional que conocemos
       </h2>
@@ -121,7 +49,7 @@
     </section>
     <section id="section3" data-scroll-section>
       <div class="component-container component-cover component-container--overlay">
-        <div class="component-container component-cover" style="background-image: url('./img/slide3.png')">
+        <div class="component-container component-cover" style="background-image: url('./img/slide3.jpeg')">
 
         </div>
       </div>
@@ -133,7 +61,7 @@
     </section>
     <section id="section4" data-scroll-section>
       <div class="component-container component-cover component-container--overlay">
-        <div class="component-container component-cover" style="background-image: url('./img/slide4.png');">
+        <div class="component-container component-cover" style="background-image: url('./img/slide4.jpeg');">
 
         </div>
       </div>
@@ -142,7 +70,7 @@
     </section>
     <section id="section5" data-scroll-section>
       <div class="component-container component-cover component-container--overlay">
-        <div class="component-container component-cover" style="background-image: url('./img/slide5.png');">
+        <div class="component-container component-cover" style="background-image: url('./img/slide5.jpeg');">
 
         </div>
       </div>
@@ -154,7 +82,7 @@
     </section>
     <section id="section6" data-scroll-section>
       <div class="component-container component-cover component-container--overlay">
-        <div class="component-container component-cover" style="background-image: url('./img/slide6.png');">
+        <div class="component-container component-cover" style="background-image: url('./img/slide6.jpeg');">
 
         </div>
       </div>
@@ -167,7 +95,7 @@
     </section>
     <section id="section7" data-scroll-section>
       <div class="component-container component-cover component-container--overlay">
-        <div class="component-container component-cover" style="background-image: url('./img/slide7.png');">
+        <div class="component-container component-cover" style="background-image: url('./img/slide7.jpeg');">
 
         </div>
       </div>
@@ -180,7 +108,7 @@
     </section>
     <section id="section8" data-scroll-section>
       <div class="component-container component-cover component-container--overlay">
-        <div class="component-container component-cover" style="background-image: url('./img/slide8.png');">
+        <div class="component-container component-cover" style="background-image: url('./img/slide8.jpeg');">
 
         </div>
       </div>
@@ -188,7 +116,7 @@
     </section>
     <section id="section9" data-scroll-section>
       <div class="component-container component-cover component-container--overlay">
-        <div class="component-container component-cover" style="background-image: url('./img/slide9.png');">
+        <div class="component-container component-cover" style="background-image: url('./img/slide9.jpeg');">
 
         </div>
       </div>
@@ -196,7 +124,7 @@
     </section>
     <section id="section10" data-scroll-section>
       <div class="component-container component-cover component-container--overlay">
-        <div class="component-container component-cover" style="background-image: url('./img/slide10.png');">
+        <div class="component-container component-cover" style="background-image: url('./img/slide10.jpeg');">
 
         </div>
       </div>
@@ -213,66 +141,11 @@
   <!-- Locomotive Scroll and Howler.js libraries -->
   <script src="js/locomotive-scroll.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+   <script src="js/kaankun.js"></script>
 
-  <script>
-    // Initialize Locomotive Scroll
-    (function () {
-      const scroll = new LocomotiveScroll({
-        el: document.querySelector('[data-scroll-container]'),
-        smooth: true,
-        multiplier: .7,
-        tablet: {
-          breakpoint: 1024,
-          smooth: true
-        },
-        smartphone: {
-          breakpoint: 767
-        }
-      });
-
-      // // Play audio when reaching specific sections
-      // scroll.on('scroll', (event) => {
-      //   if (event.scroll.y > document.querySelector('#section2').offsetTop) {
-      //     if (!sound.playing()) {
-      //       sound.play();
-      //     }
-      //   } else {
-      //     sound.stop();
-      //   }
-      // });
-      const backgroundMusic = new Howl({
-        src: ['./img/sea-waves-169411.mp3'], // Adjust the path based on your folder structure
-        loop: true,   // Enable looping if you want the audio to play continuously
-        volume: 0.5   // Set the initial volume (0.0 to 1.0)
-      });
-      let isPlaying = false; // Flag to track if audio is currently playing
-
-   
-      let hasUserInteracted = false; // Track if the user has interacted
-
-      // Start audio only after a user interaction (click or touch)
-      const enableAudio = () => {
-        hasUserInteracted = true;
-        document.removeEventListener('click', enableAudio); // Remove listener after first interaction
-        document.removeEventListener('touchstart', enableAudio);
-      };
-
-      document.addEventListener('click', enableAudio);
-      document.addEventListener('touchstart', enableAudio);
-
-      // Play audio on scroll after user interaction
-      window.addEventListener('scroll', () => {
-        if (hasUserInteracted && !isPlaying) {
-          scrollAudio.play();
-          isPlaying = true;
-        }
-      });
-
-    })();
-
-
-
-  </script>
 </body>
 
 </html>

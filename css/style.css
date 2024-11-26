@@ -1,0 +1,101 @@
+ /* Basic styling */
+ body,
+ html {
+     margin: 0;
+     padding: 0;
+     overflow: hidden;
+ }
+
+ /* .container {
+   position: relative;
+   overflow: hidden;
+   height: 100vh;
+ } */
+
+ /* section {
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 2rem;
+   color: #fff;
+   flex-direction: column;
+   text-align: center;
+
+ } */
+
+
+
+
+ /* Initial state of text (hidden) */
+ .text-animate {
+     /* opacity: 0; */
+     transform: translateY(50px);
+     transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+ }
+
+ section>h2 {
+     padding: 0 35px 0 35px;
+     font-family: 'Quicksand', sans-serif;
+ }
+
+ /* Animated state of text when in viewport */
+ .text-animate.visible {
+     opacity: 1;
+     transform: translateY(0);
+ }
+
+
+
+ /* .component-container--overlay:after {
+   content: "";
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   background: rgba(0, 0, 0, .54);
+
+ }  */
+ section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1); /* Optional overlay effect */
+    mix-blend-mode: multiply;
+    pointer-events: none;
+  }
+  
+  .component-cover {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .component-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  h2 {
+    position: absolute; /* Absolute to overlay on the image */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust positioning for centering */
+    z-index: 1; /* Higher z-index to appear above the image */
+    color: white; /* Text color for contrast */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Optional shadow for readability */
+    font-size: 2.5rem; /* Adjust font size as needed */
+    text-align: center; /* Center the text */
+  }
