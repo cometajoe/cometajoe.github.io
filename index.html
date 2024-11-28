@@ -5,146 +5,309 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Documentary Landing Page</title>
+  <title>Kaan Kun</title>
   <!-- <link rel="stylesheet" href="css/locomotive-scroll.css"> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Domine:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
     rel="stylesheet">
-   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <!-- Main container -->
-  <div class="container" data-scroll-container>
+  <main>
+    <div class="container" data-scroll-container>
+      <div class="audio-button-container">
+        <button id="audioButton" class="audio-button">
+          ▷
+        </button>
+        <audio id="backgroundAudio" src="img/sea-waves-169411.mp3"></audio>
+
+      </div>
+      <aside>
+        <ul>
+          <li>
+            <a class="indicator active" href="#section1"></a>
+          </li>
+          <li>
+            <a class="indicator" href="#section2"></a>
+          </li>
+          <li>
+            <a class="indicator" href="#section3"></a>
+          </li>
+          <li>
+            <a class="indicator" href="#section4"></a>
+          </li>
+          <li>
+            <a class="indicator" href="#section5"></a>
+          </li>
+          <li>
+            <a class="indicator" href="#section6"></a>
+          </li>
+        </ul>
+      </aside>
+      <!-- <div class="bullet-nav">
+    <a href="#section1" class="bullet active" data-section="1"></a>
+    <a href="#section2" class="bullet" data-section="2"></a>
+    <a href="#section3" class="bullet" data-section="3"></a>
+    <a href="#section4" class="bullet" data-section="4"></a>
+    <a href="#section5" class="bullet" data-section="5"></a>
+    <a href="#section6" class="bullet" data-section="6"></a>
+    <a href="#section7" class="bullet" data-section="7"></a>
+    <a href="#section8" class="bullet" data-section="8"></a>
+    <a href="#section9" class="bullet" data-section="9"></a>
+    <a href="#section10" class="bullet" data-section="10"></a>
+  </div> -->
 
 
-    <!-- Sections to scroll through -->
-    <section id="section1" data-scroll-section>
 
-      <div class="component-container component-cover component-container--overlay">
-        <div class="component-container component-cover" style="background-image: url('./img/slide1.jpeg');">
+      <!-- Sections to scroll through -->
+      <section id="section1" data-scroll-section>
+
+        <div class="component-container component-cover component-container--overlay">
+          <div class="component-container component-cover" style="background-image: url('./img/slide1.jpeg');">
+
+          </div>
+        </div>
+        <h2 data-scroll data-scroll-speed="2" class="text-animate" data-scroll data-scroll-class="visible">Para recordar
+          el paraíso de Cancún
+          antes de que lo hicieran paraíso</h2>
+      </section>
+      <section id="section2" data-scroll-section>
+        <div class="component-container component-cover component-container--overlay">
+          <div class="component-container component-cover" style="background-image: url('img/slide2.jpeg');">
+
+          </div>
+        </div>
+        <img src="img/kaankun.png" alt="Kaan Kun Documental La Salle"
+          style="position:absolute; top: 10px; left: 20px; width: 30%; z-index: 1;">
+        <h2 class="text-animate" data-scroll data-scroll-speed="2" data-scroll-class="visible">Antes de que Cancún se
+          convirtiera en el vibrante epicentro turístico internacional que conocemos
+        </h2>
+
+      </section>
+      <section id="section3" data-scroll-section>
+        <div class="component-container component-cover component-container--overlay">
+          <div class="component-container component-cover" style="background-image: url('./img/slide3.jpeg')">
+
+          </div>
+        </div>
+        <h2 class="text-animate" data-scroll data-scroll-speed="2" data-scroll-class="visible">Imagina un lugar donde el
+          sonido del mar y el canto de las aves se mezclan con el murmullo de la selva. Así era Cancún en sus inicios,
+          un
+          territorio inexplorado y lleno de posibilidades.
+
+        </h2>
+      </section>
+
+      <section id="section4" data-scroll-section>
+        <div class="component-container component-cover component-container--overlay">
+          <div class="component-container component-cover" style="background-image: url('./img/slide5.jpeg');">
+
+          </div>
+        </div>
+        <h2 class="text-animate" data-scroll data-scroll-speed="2" data-scroll-class="visible">¿Qué significa Cancún
+          para
+          el resto del mundo? Para muchos, un destino paradisíaco; noches de fiesta interminables y algunas las playas
+          más
+          hermosas de México. ¿Qué pensarías si te dijera que detrás de ese nombre, hay una historia que comenzó mucho
+          antes de los resorts y las playas atestadas de gente?
+        </h2>
+      </section>
+      <section id="section5" data-scroll-section>
+        <div class="component-container component-cover component-container--overlay">
+          <div class="component-container component-cover" style="background-image: url('./img/slide6.jpeg');">
+
+          </div>
+        </div>
+        <h2 class="text-animate" data-scroll data-scroll-speed="2" data-scroll-class="visible">Hoy, entre los modernos
+          hoteles y las avenidas transitadas, aún se pueden escuchar los ecos de aquel Cancún que ya no existe. Voces
+          que
+          nos cuentan cómo era vivir en estas tierras, cuando las aguas cristalinas no eran el atractivo principal, sino
+          el sustento de una comunidad que crecía con el mar y la selva. Un lugar que, con el tiempo, cambiaría para
+          siempre.
+        </h2>
+      </section>
+      <section id="section6" data-scroll-section>
+        <div class="component-container component-cover component-container--overlay">
+          <div class="component-container component-cover" style="background-image: url('./img/slide7.jpeg');">
+
+          </div>
+        </div>
+        <h2 class="text-animate" data-scroll data-scroll-speed="2" data-scroll-class="visible">Pero ¿qué se perdió en
+          esa
+          transformación? ¿Qué quedó de aquel pequeño pueblo pesquero, enterrado bajo el peso del turismo? Mientras el
+          sol
+          baña las arenas blancas, las memorias de los primeros habitantes sobreviven, y con ellas, una historia que
+          merece ser contada.
+
+        </h2>
+      </section>
+      <section id="section7" data-scroll-section style="background: black;">
+        <h2 class="text-animate" data-scroll data-scroll-speed="2" data-scroll-class="visible">Este es el Cancún que
+          pocos conocen</h2>
+      </section>
+      <section id="section8" data-scroll-section>
+        <div class="component-container component-cover component-container--overlay">
+          <div class="component-container component-cover" style="background-image: url('./img/slide4.jpeg');">
+
+          </div>
+
+          
 
         </div>
-      </div>
-      <h2 data-scroll data-scroll-speed="2" class="text-animate" data-scroll data-scroll-class="visible">Para recordar
-        el paraíso de Cancún
-        antes de que lo hicieran paraíso</h2>
-    </section>
-    <section id="section2" data-scroll-section>
-      <div class="component-container component-cover component-container--overlay">
-        <div class="component-container component-cover" style="background-image: url('img/slide2.jpeg');">
-
+        <img src="img/kaankun.png" alt="Kaan Kun Documental La Salle" style="width: 25%; z-index: 1;">
+        <div class="hero-subtitle">EL DOCUMENTAL</div>
+        <p class="text-animate" data-scroll data-scroll-speed="2" data-scroll-class="visible" >
+          El documental está dividido en tres capítulos, diseñados para llevarte por el
+          camino de la historia y evolución de Cancún. En ellos descubrirás sus inicios
+          como un pequeño pueblo pesquero y la transformación que lo convirtió en un
+          destino turístico de renombre mundial. Cada capítulo te acerca a entender no
+          solo lo que fue, sino lo que sigue siendo este lugar único.
+        </p>
+        <div class="scroll-indicator">
+          <span>&#8595;</span>
         </div>
-      </div>
-      <img src="img/kaankun.png" alt="Kaan Kun Documental La Salle" style="position:absolute; top: 10px; left: 20px; width: 30%; z-index: 1;">
-      <h2 class="text-animate" data-scroll data-scroll-speed="2" data-scroll-class="visible">Antes de que Cancún se
-        convirtiera en el vibrante epicentro turístico internacional que conocemos
-      </h2>
+      </section>
+      <section id="section9" data-scroll-section>
+        <div class="component-container component-cover component-container--overlay">
+          <div class="component-container component-cover" style="background-image: url('./img/slide8.jpeg');">
 
-    </section>
-    <section id="section3" data-scroll-section>
-      <div class="component-container component-cover component-container--overlay">
-        <div class="component-container component-cover" style="background-image: url('./img/slide3.jpeg')">
-
+          </div>          
         </div>
-      </div>
-      <h2 class="text-animate" data-scroll data-scroll-speed="2" data-scroll-class="visible">Imagina un lugar donde el
-        sonido del mar y el canto de las aves se mezclan con el murmullo de la selva. Así era Cancún en sus inicios, un
-        territorio inexplorado y lleno de posibilidades.
-
-      </h2>
-    </section>
-    <section id="section4" data-scroll-section>
-      <div class="component-container component-cover component-container--overlay">
-        <div class="component-container component-cover" style="background-image: url('./img/slide4.jpeg');">
-
+        <div class="chapter-container">
+             <div class="chapter-blank chapter-item">
+              <button id="play-chapter-one" class="audio-button" style="position: absolute; top: 50%; right: 50%;">
+                ▷
+              </button>
+             </div>
+           
+             <div class="chapter-description chapter-item">
+              <h2 data-scroll-speed="2">CAPITULO 1</h2>
+              <h3>NOSTALGIA EN EL PARAÍSO</h3>
+              <p data-scroll data-scroll-speed="2" data-scroll-class="visible">El cambio comenzó con la creación de Fonatur (Fondo Nacional de Fomento al Turismo) en los años setenta, cuando el gobierno federal lanzó un proyecto ambicioso para desarrollar Cancún como un destino turístico de primer nivel. </p>
+             </div>
         </div>
-      </div>
-      <h2 class="text-animate" data-scroll data-scroll-speed="2" data-scroll-class="visible">
-      </h2>
-    </section>
-    <section id="section5" data-scroll-section>
-      <div class="component-container component-cover component-container--overlay">
-        <div class="component-container component-cover" style="background-image: url('./img/slide5.jpeg');">
-
+        <div id="videoPopup" class="popup">
+          <div class="popup-content">
+            <span id="closePopup" class="close">&times;</span>
+            <!-- YouTube Video -->
+            <iframe
+              id="youtubeVideo"
+              src="https://www.youtube.com/embed/rPkd_Udcm-k"
+              frameborder="0"
+              allow="autoplay; encrypted-media"
+              allowfullscreen>
+            </iframe>
+          </div>
         </div>
-      </div>
-      <h2 class="text-animate" data-scroll data-scroll-speed="2" data-scroll-class="visible">¿Qué significa Cancún para
-        el resto del mundo? Para muchos, un destino paradisíaco; noches de fiesta interminables y algunas las playas más
-        hermosas de México. ¿Qué pensarías si te dijera que detrás de ese nombre, hay una historia que comenzó mucho
-        antes de los resorts y las playas atestadas de gente?
-      </h2>
-    </section>
-    <section id="section6" data-scroll-section>
-      <div class="component-container component-cover component-container--overlay">
-        <div class="component-container component-cover" style="background-image: url('./img/slide6.jpeg');">
+       
+      </section>
+      <section id="section10" data-scroll-section style="background-color: #202020;">
+        <!-- <div class="component-container component-cover component-container--overlay">
+          <div class="component-container component-cover" style="background-image: url('./img/slide9.jpeg');">
 
+          </div>
+        </div> -->
+        <div class="story-voice-right">
+          <div><img src="img/people/person1.jpg" alt=""></div>
+          
+          <div class="voice-description">
+            <h2>Jorge Durán | Periodista e Historiador de Cancún
+            </h2>
+            <p>Jorge Durán llegó a Cancún en 1978, cuando aún era un pequeño poblado en desarrollo, lleno de esperanza y posibilidades. Como periodista, Durán se ha dedicado a documentar el crecimiento de Cancún desde sus días iniciales hasta la imponente ciudad turística que es hoy. </p>
+            
+          </div>
         </div>
-      </div>
-      <h2 class="text-animate" data-scroll data-scroll-speed="2" data-scroll-class="visible">Hoy, entre los modernos
-        hoteles y las avenidas transitadas, aún se pueden escuchar los ecos de aquel Cancún que ya no existe. Voces que
-        nos cuentan cómo era vivir en estas tierras, cuando las aguas cristalinas no eran el atractivo principal, sino
-        el sustento de una comunidad que crecía con el mar y la selva. Un lugar que, con el tiempo, cambiaría para
-        siempre.
-      </h2>
-    </section>
-    <section id="section7" data-scroll-section>
-      <div class="component-container component-cover component-container--overlay">
-        <div class="component-container component-cover" style="background-image: url('./img/slide7.jpeg');">
+        <h5>VOCES DE LA HISTORIA</h5>
+      </section>
+      <section id="section11" data-scroll-section style="background-color: #202020;">
+        <!-- <div class="component-container component-cover component-container--overlay">
+          <div class="component-container component-cover" style="background-image: url('./img/slide9.jpeg');">
 
+          </div>
+        </div> -->
+        <div class="story-voice-left">       
+          
+          <div class="voice-description">
+            <h2>Areli Sánchez | Trabajadora de la CONANP
+            </h2>
+            <p>Areli Sánchez, trabajadora de la Comisión Nacional de Áreas Naturales Protegidas (CONANP), ofrece una visión fundamentalmente ecológica del cambio en Cancún. Desde su rol en la CONANP, ha sido testigo de cómo el turismo y el desarrollo han impactado en el ecosistema y la biodiversidad local. </p>
+          
+          </div>
+          <div><img src="img/people/person1.jpg" alt=""></div>
         </div>
-      </div>
-      <h2 class="text-animate" data-scroll data-scroll-speed="2" data-scroll-class="visible">Pero ¿qué se perdió en esa
-        transformación? ¿Qué quedó de aquel pequeño pueblo pesquero, enterrado bajo el peso del turismo? Mientras el sol
-        baña las arenas blancas, las memorias de los primeros habitantes sobreviven, y con ellas, una historia que
-        merece ser contada.
+        <div>  <h5>VOCES DE LA HISTORIA</h5></div>
+      
+      </section>
+      <section id="section12" data-scroll-section style="background-color: #202020;">
+        <!-- <div class="component-container component-cover component-container--overlay">
+          <div class="component-container component-cover" style="background-image: url('./img/slide9.jpeg');">
 
-      </h2>
-    </section>
-    <section id="section8" data-scroll-section>
-      <div class="component-container component-cover component-container--overlay">
-        <div class="component-container component-cover" style="background-image: url('./img/slide8.jpeg');">
-
+          </div>
+        </div> -->
+        <div class="story-voice-right">
+          <div><img src="img/people/person1.jpg" alt=""></div>
+          
+          <div class="voice-description">
+            <h2>Wolfgang Gust | Ex Guía Turístico
+            </h2>
+            <p>Wolfgang Gust, ha tenido una perspectiva de primera mano sobre la evolución del turismo en Cancún y cómo este cambio ha impactado a los visitantes y locales por igual.  En un inicio, Cancún era un destino para quienes buscaban una conexión con la naturaleza y la cultura maya. Con el tiempo, sin embargo, notó que los turistas comenzaron a esperar una experiencia más comercializada, llena de comodidades y servicios que desdibujaban la esencia original de Cancún.
+            </p>
+            
+          </div>
         </div>
-      </div>
-      <h1 data-scroll-speed="2">Discover the Story</h1>
-    </section>
-    <section id="section9" data-scroll-section>
-      <div class="component-container component-cover component-container--overlay">
-        <div class="component-container component-cover" style="background-image: url('./img/slide9.jpeg');">
+       
+          <h5>VOCES DE LA HISTORIA</h5>
+      
+      </section>
+      <section id="section13" data-scroll-section style="background-color: #202020;">
+        <!-- <div class="component-container component-cover component-container--overlay">
+          <div class="component-container component-cover" style="background-image: url('./img/slide9.jpeg');">
 
+          </div>
+        </div> -->
+        <div class="story-voice-left">
+          
+          
+          <div class="voice-description">
+            <h2>Carlos Cardín Pérez | Ex Presidente Municipal de Cancún
+            </h2>
+            <p>Carlos Cardín Pérez, uno de los principales actores en la administración de Cancún durante sus primeras etapas de desarrollo, no solo presenció, sino que fue parte activa en el proceso de transformación de la ciudad. Como expresidente municipal, Cardín tuvo la responsabilidad de implementar políticas de desarrollo y ordenamiento territorial en un periodo crítico. </p>
+           
+          </div>
+          <div><img src="img/people/person1.jpg" alt=""></div>
         </div>
-      </div>
-      <h1 data-scroll-speed="-1">Listen to the Sounds</h1>
-    </section>
-    <section id="section10" data-scroll-section>
-      <div class="component-container component-cover component-container--overlay">
-        <div class="component-container component-cover" style="background-image: url('./img/slide10.jpeg');">
+        <h5>VOCES DE LA HISTORIA</h5>
+      </section>
+      <section id="section14" data-scroll-section>
+        <div class="component-container component-cover component-container--overlay">
+          <div class="component-container component-cover" style="background-image: url('./img/slide10.jpeg');">
 
+          </div>
         </div>
-      </div>
-      <h1 data-scroll data-scroll-speed="4">Welcome to the Documentary</h1>
-    </section>
-    <!-- <section id="section11" data-scroll-section>
+        <h1 data-scroll data-scroll-speed="4">Welcome to the Documentary</h1>
+      </section>
+      <!-- <section id="section11" data-scroll-section>
       <h1 data-scroll-speed="2">Discover the Story</h1>
     </section>
     <section id="section12" data-scroll-section>
       <h1 data-scroll-speed="-1">Listen to the Sounds</h1>
     </section> -->
-  </div>
+    </div>
+
+  </main>
 
   <!-- Locomotive Scroll and Howler.js libraries -->
   <script src="js/locomotive-scroll.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis"></script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-   <script src="js/kaankun.js"></script>
+  <script src="js/kaankun.js"></script>
 
 </body>
 

@@ -1,107 +1,367 @@
- /* Basic styling */
- body,
- html {
-     margin: 0;
-     padding: 0;
-     overflow: hidden; /* Lenis handles scrolling */
-     -webkit-overflow-scrolling: touch; /* iOS smooth scroll fallback */
- }
 
- body {
-    touch-action: pan-y; /* Enable smooth vertical scrolling */
-    overscroll-behavior: none; /* Prevent bounce effects */
-  }
+html {
+    scroll-behavior: smooth;
+}
 
- /* .container {
-   position: relative;
-   overflow: hidden;
-   height: 100vh;
- } */
+/* Basic styling */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
 
- /* section {
-   height: 100vh;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   font-size: 2rem;
-   color: #fff;
-   flex-direction: column;
-   text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+}
 
- } */
+h1,
+h2,
+h3,
+p
+{
+    margin: 5px;
+}
 
+html,
+body {
+    margin: 0;
+  padding: 0;
+  overflow: hidden;
+  scroll-behavior: smooth; /* Enables smooth scrolling */
+  font-family: "Crimson Pro", sans-serif;
+  height: 100%;
+}
+
+main {
+  display: flex;
+}
+
+
+section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: #fff;
+  flex-direction: column;
+  text-align: center;
+}
 
 
 
  /* Initial state of text (hidden) */
  .text-animate {
-     /* opacity: 0; */
+      opacity: 0; 
      transform: translateY(50px);
      transition: opacity 1.2s ease-out, transform 1.2s ease-out;
  }
 
  section>h2 {
      padding: 0 35px 0 35px;
-     font-family: 'Quicksand', sans-serif;
+   
  }
 
  /* Animated state of text when in viewport */
  .text-animate.visible {
-     opacity: 1;
-     transform: translateY(0);
+     /* opacity: 1;*/
+     transform: translateY(0); 
+     -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
  }
 
+ .component-cover {
+     background-size: cover;
+     background-repeat: no-repeat;
+ }
+
+ .component-container {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     z-index: -1;
+     transition: opacity 3.5s cubic-bezier(.19, .78, .59, 1.01);
+ }
+
+ .component-container--overlay:after {
+     content: "";
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     top: 0;
+     left: 0;
+     background: rgba(0, 0, 0, .54);
+
+ }
+
+.hero-subtitle
+{
+    background: black;
+    padding: 10px;
+}
+.chapter-container
+{
+    display: flex;
+    flex-direction: row;
+    gap: 10px; /* Adds spacing between items */
+    justify-content: space-between; /* Adjusts alignment */
+}
+
+.chapter-description
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.chapter-item{
+    flex: 1 1 100px; /* Default width is 100px */
+  padding: 10px;
+  
+  text-align: center;
+
+}
 
 
- /* .component-container--overlay:after {
-   content: "";
-   width: 100%;
-   height: 100%;
-   position: absolute;
-   top: 0;
-   left: 0;
-   background: rgba(0, 0, 0, .54);
+ /* Audio */
 
- }  */
- section {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
+ /* Audio button container */
+.audio-button-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Style the button */
+.audio-button {
+    background-color: #ffffff; /* White background */
+    color: #333;              /* Dark text */
+    font-size: 20px;          /* Icon size */
+    border: none;
+    border-radius: 50%;       /* Circular button */
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.audio-button:hover {
+    background-color: #86eee4; /* Accent color on hover */
+    transform: scale(1.1);     /* Slightly larger on hover */
+}
+
+.audio-button:active {
+    transform: scale(0.95);    /* Slightly smaller on click */
+}
+
+
+/* Dot links */
+
+
+aside {
+    position: fixed;
+    top: 48%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
   }
   
-  section::before {
-    content: "";
-    position: absolute;
+  aside ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+  }
+  
+  aside ul li .indicator {
+    cursor: pointer;
+    margin-top: 1rem;
+    display: block;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: white;
+  }
+  
+  aside ul li .active {
+    transform: scale(1.7);
+    transition: transform 200ms ease-in-out;
+  }
+  
+
+
+  /* Popup */
+  /* Button styles */
+#openPopup {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #openPopup:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Popup styles */
+  .popup {
+    display: none; /* Hidden by default */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.1); /* Optional overlay effect */
-    mix-blend-mode: multiply;
-    pointer-events: none;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
   }
   
-  .component-cover {
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .component-container {
+  .popup-content {
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    max-width: 800px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
   }
   
-  h2 {
-    position: absolute; /* Absolute to overlay on the image */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust positioning for centering */
-    z-index: 1; /* Higher z-index to appear above the image */
-    color: white; /* Text color for contrast */
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Optional shadow for readability */
-    font-size: 2.5rem; /* Adjust font size as needed */
-    text-align: center; /* Center the text */
+  .popup-content iframe {
+    width: 100%;
+    height: 450px;
+    display: block;
   }
+  
+  /* Close button */
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .close:hover {
+    color: red;
+  }
+
+  /* Voice */
+
+  .story-voice-right,  .story-voice-left {
+    display: flex;
+    gap: 25px;
+    margin:15px;
+    padding: 10px;
+  }
+
+  .story-voice-right div:nth-child(1)
+  {
+    flex: 1; /* Distribución igual */
+  }
+  .story-voice-right div:nth-child(2)
+  {
+    flex: 2; 
+  }
+
+  .story-voice-left div:nth-child(1)
+  {
+    flex: 2; /* Distribución igual */
+  }
+  .story-voice-left div:nth-child(2)
+  {
+    flex: 1; 
+  }
+
+  .voice-description
+  {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+ section h5
+  {
+    text-align: right;
+    font-size: 1rem;
+    margin-right: 25px;
+  }
+
+  .story-voice-right img,   .story-voice-left img
+  {
+    
+    width: 100%;
+  }
+
+  /* Content Wrapper */
+
+  
+  /* Scroll Indicator */
+  .scroll-indicator {
+    margin-top: 2rem;
+    font-size: 2rem;
+    color: white;
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(10px);
+    }
+    60% {
+      transform: translateY(5px);
+    }
+  }
+
+
+  /**text effect*/
+
+/* ----------------------------------------------
+ * Generated by Animista on 2024-11-27 20:53:11
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation text-focus-in
+ * ----------------------------------------
+ */
+ @-webkit-keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  
