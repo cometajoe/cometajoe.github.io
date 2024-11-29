@@ -40,7 +40,7 @@ main {
 
 
 section {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -61,7 +61,7 @@ section {
  }
 
  section>h2 {
-     padding: 0 35px 0 35px;
+     padding: 0 60px 0 60px;
    
  }
 
@@ -119,6 +119,10 @@ section {
     flex-direction: column;
 }
 
+.chapter-description p{
+  text-align: justify;
+}
+
 .chapter-item{
     flex: 1 1 100px; /* Default width is 100px */
   padding: 10px;
@@ -168,11 +172,12 @@ section {
 aside {
     position: fixed;
     top: 48%;
+    right: 15px;
     transform: translate(-50%, -50%);
     z-index: 9;
   }
   
-  aside ul {
+  .audio-button-container ul {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -180,19 +185,21 @@ aside {
     margin: 0;
   }
   
-  aside ul li .indicator {
+  .audio-button-container ul li .indicator {
     cursor: pointer;
-    margin-top: 1rem;
+    margin-top: 0.6rem;
     display: block;
-    height: 15px;
-    width: 15px;
+    height: 10px;
+    width: 10px;
     border-radius: 50%;
     background-color: white;
+    opacity: 0.6;
   }
   
-  aside ul li .active {
+  .audio-button-container ul li .active {
     transform: scale(1.7);
     transition: transform 200ms ease-in-out;
+    opacity: 1
   }
   
 
@@ -301,6 +308,92 @@ aside {
     
     width: 100%;
   }
+
+  /* Memories */
+  .memory-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+    /* height: 100%; */
+    padding-top: 25px;
+    background-color: #f8f8f8;
+  }
+  .images-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+  
+  .images-column img {
+    width: 100%;
+    max-width: 300px; /* Limit the maximum size of images */
+    border: 5px solid #f4f4f4;
+    border-radius: 10px;
+    transform: rotate(-3deg);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .images-column img:hover {
+    transform: rotate(0deg);
+  }
+
+  .text-column {
+    flex: 2;
+    padding-right: 30px;    
+    color: #333;
+    
+  }
+  
+  .text-column h2 {
+    /* font-size: 24px; */
+    font-weight: 400;
+    color: #444;
+  }
+
+   h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h2 span
+  {
+    color: #324c6d;
+  }
+  
+  .text-column h1 {
+    /* font-size: 36px; */
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .text-column p {
+     font-size: 1.8rem; 
+    line-height: 1.4;
+    text-align: justify;
+    margin-bottom: 15px;
+  }
+
+
+ .row-cancun
+{
+    display: flex; 
+    color:black;
+    flex-direction: row;
+    padding: 25px;
+    /* gap: 15px; */
+  } 
+  
+
+
+  
 
   /* Content Wrapper */
 

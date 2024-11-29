@@ -136,7 +136,40 @@
 
     // sections.forEach(onSectionLeavesViewport);
 
+    const links = document.querySelectorAll('.indicator');
+   
 
+    links.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault(); // Evita el comportamiento predeterminado
+          const targetId = link.getAttribute('href'); // Obtén el ID de destino
+          const targetElement = document.querySelector(targetId); // Selecciona la sección
+      
+          scroll.scrollTo(targetElement); // Desplázate a la sección
+        });
+      });
+
+    //   scroll.on('call', (func, dir, obj) => {
+    //     console.log(func, dir, obj);
+    //     if (func === 'updateNav') {
+    //       const activeLink = document.querySelector(`.indicator[href="#${obj.id}"]`);
+    //       console.log(activeLink);
+    //       document.querySelectorAll('.indicator').forEach(link => {
+    //         link.classList.remove('active');
+    //       });
+    //       if (activeLink) activeLink.classList.add('active');
+    //     }
+    //   });
+      
+    scroll.on('scroll', (args) => {
+        // Get all current elements : args.currentElements
+        if(typeof args.currentElements['hey'] === 'object') {
+            let progress = args.currentElements['hey'].progress;
+            console.log(progress);
+            // ouput log example: 0.34
+            // gsap example : myGsapAnimation.progress(progress);
+        }
+    });
 
     // Get elements
     const openPopup = document.getElementById('play-chapter-one');
