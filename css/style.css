@@ -143,26 +143,49 @@ section {
 }
 
 /* Style the button */
+
 .audio-button {
-    background-color: #ffffff; /* White background */
-    color: #333;              /* Dark text */
-    font-size: 20px;          /* Icon size */
-    border: none;
-    border-radius: 50%;       /* Circular button */
-    width: 50px;
-    height: 50px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
-    cursor: pointer;
-    transition: transform 0.2s ease, background-color 0.3s ease;
+  display: inline-block; /* Allow block-like styling for <a> */
+
+  transform: translate(50%, -50%); /* Center the button on the screen */
+  
+  width: 60px; /* Width of the circle */
+  height: 60px; /* Height of the circle */
+  background-color: #202020; /* Circle background color */
+  border-radius: 50%; /* Makes the  /* Removes underline for the link */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds shadow for depth */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
 }
 
+/* Center the play symbol using a pseudo-element */
+.audio-button::before {
+  content: ''; /* Add a triangle */
+  display: block; /* Ensure it behaves like a block for dimensions */
+  margin: auto; /* Center the triangle */
+  width: 0; /* No width for the base of the triangle */
+  height: 0; /* No height for the top */
+  border-style: solid; /* Makes the triangle */
+  border-width: 10px 0 10px 20px; /* Top, Right, Bottom, Left */
+  border-color: transparent transparent transparent #fff; /* White triangle */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /* Center triangle in the circle */
+}
+
+  /* Hover effects */
 .audio-button:hover {
-    background-color: #86eee4; /* Accent color on hover */
-    transform: scale(1.1);     /* Slightly larger on hover */
+  background-color: #fff; /* Darker blue on hover */
+  transform: translate(50%, -50%) scale(1.1); /* Slight zoom effect */
 }
 
+.audio-button:hover::before
+{
+  border-color: transparent transparent transparent #202020; /* White triangle */
+}
+/* Active (click) effects */
 .audio-button:active {
-    transform: scale(0.95);    /* Slightly smaller on click */
+  transform: translate(50%, -50%) scale(0.95); /* Shrink on click */
 }
 
 
@@ -268,7 +291,7 @@ aside {
     display: flex;
     gap: 25px;
     margin:15px;
-    padding: 10px;
+    padding: 40px;
   }
 
   .story-voice-right div:nth-child(1)
@@ -293,7 +316,7 @@ aside {
   {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 
  section h5
@@ -392,6 +415,57 @@ aside {
   } 
   
 
+/* Card Container */
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Individual Card Styling */
+.card {
+  background-color: white;
+  color: black;
+  width: 300px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.card a {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.card button:hover {
+  background-color: #444444;
+}
 
   
 

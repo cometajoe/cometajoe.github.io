@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="css/lity.min.css" rel="stylesheet">
   <link
     href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Domine:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
     rel="stylesheet">
@@ -21,10 +22,11 @@
   <main>
     <div class="container" data-scroll-container>
       <div class="audio-button-container">
-        <button id="audioButton" class="audio-button">
-          ▷
-        </button>
+        <div class="button-container">
+        <a href="#" id="audioButton" class="audio-button"></a>
         <audio id="backgroundAudio" src="img/sea-waves-169411.mp3"></audio>
+
+      </div>
         <ul>
           <li>
             <a class="indicator active" href="#section1"></a>
@@ -201,9 +203,9 @@
         </div>
         <div class="chapter-container">
           <div class="chapter-blank chapter-item">
-            <button id="play-chapter-one" class="audio-button" style="position: absolute; top: 50%; right: 50%;">
-              ▷
-            </button>
+        
+            <a id="demo01"  class="audio-button" style="position: absolute; top: 50%; right: 50%;"  href="//www.youtu.be/FDsAVGziB7s?si=SQpwzYwy2lqYQzxG" data-lity>
+              </a>
           </div>
 
           <div class="chapter-description chapter-item">
@@ -212,13 +214,6 @@
             <p data-scroll data-scroll-speed="2" data-scroll-class="visible">El cambio comenzó con la creación de
               Fonatur (Fondo Nacional de Fomento al Turismo) en los años setenta, cuando el gobierno federal lanzó un
               proyecto ambicioso para desarrollar Cancún como un destino turístico de primer nivel. </p>
-          </div>
-        </div>
-        <div id="videoPopup" class="popup">
-          <div class="popup-content">
-            <span id="closePopup" class="close">&times;</span>
-            <!-- YouTube Video -->
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/LWpNWWXNy5I?si=dHMJUhOFr9W7teXs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </div>
         </div>
 
@@ -230,6 +225,7 @@
           </div>
         </div>
         <div class="chapter-container">
+  
           <div class="chapter-description chapter-item">
             <h2 data-scroll-speed="2">CAPITULO 2</h2>
             <h3>Lecciones de Resiliencia</h3>
@@ -240,20 +236,13 @@
             </p>
           </div>
           <div class="chapter-blank chapter-item">
-            <button id="play-chapter-one" class="audio-button" style="position: absolute; top: 50%; right: 47%;">
-              ▷
-            </button>
+        
+            <a id="demo01"  class="audio-button" style="position: absolute; top: 50%; right: 50%;"  href="//www.youtu.be/YirRLzNGmpE?si=CRgA81Ih21ZSdNtk" data-lity>
+              </a>
           </div>
 
+        </div>
 
-        </div>
-        <div id="videoPopup" class="popup">
-          <div class="popup-content">
-            <span id="closePopup" class="close">&times;</span>
-            <!-- YouTube Video -->
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/LWpNWWXNy5I?si=dHMJUhOFr9W7teXs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          </div>
-        </div>
 
       </section>
       <section id="section11" data-scroll-section data-scroll-call="updateNav">
@@ -264,10 +253,11 @@
         </div>
         <div class="chapter-container">
           <div class="chapter-blank chapter-item">
-            <button id="play-chapter-one" class="audio-button" style="position: absolute; top: 50%; right: 50%;">
-              ▷
-            </button>
+        
+            <a id="demo01"  class="audio-button" style="position: absolute; top: 50%; right: 50%;"  href="//www.youtu.be/vNC9rkdxL8E?si=pf3MLglaiYV0TBl6" data-lity>
+              </a>
           </div>
+        
 
           <div class="chapter-description chapter-item">
             <h2 data-scroll-speed="2">CAPITULO 3</h2>
@@ -278,14 +268,7 @@
               nuevos rostros. </p>
           </div>
         </div>
-        <div id="videoPopup" class="popup">
-          <div class="popup-content">
-            <span id="closePopup" class="close">&times;</span>
-            <!-- YouTube Video -->
-            <iframe id="youtubeVideo" src="https://www.youtube.com/embed/rPkd_Udcm-k" allow="autoplay;" allowfullscreen>
-            </iframe>
-          </div>
-        </div>
+
 
       </section>
       <section id="section12" data-scroll-section data-scroll-call="updateNav" style="background-color: #202020;">
@@ -295,7 +278,7 @@
           </div>
         </div> -->
         <div class="story-voice-right">
-          <div><img src="img/people/person1.jpg" alt=""></div>
+          <div><img src="img/people/duran.jpeg" alt=""></div>
 
           <div class="voice-description">
             <h2>Jorge Durán | Periodista e Historiador de Cancún
@@ -324,7 +307,7 @@
               el turismo y el desarrollo han impactado en el ecosistema y la biodiversidad local. </p>
 
           </div>
-          <div><img src="img/people/person1.jpg" alt=""></div>
+          <div><img src="img/people/areli.jpeg" alt=""></div>
         </div>
         <div>
           <h5>VOCES DE LA HISTORIA</h5>
@@ -338,7 +321,7 @@
           </div>
         </div> -->
         <div class="story-voice-right">
-          <div><img src="img/people/person1.jpg" alt=""></div>
+          <div><img src="img/people/gust.jpeg" alt=""></div>
 
           <div class="voice-description">
             <h2>Wolfgang Gust | Ex Guía Turístico
@@ -370,11 +353,38 @@
               y ordenamiento territorial en un periodo crítico. </p>
 
           </div>
-          <div><img src="img/people/person1.jpg" alt=""></div>
+          <div><img src="img/people/cardin.jpeg" alt=""></div>
         </div>
         <h5>VOCES DE LA HISTORIA</h5>
       </section>
-      <section id="section16" class="memory-section" data-scroll-section data-scroll-call="updateNav">
+      <section id="section16" data-scroll-section  style="background-color: #202020;">
+        <div style="text-align: left;">
+          <div style="text-align: center; width: 50%;">
+            <h2>CONOCE SUS</h2>
+          </div>
+          <div style="text-align: center;   width: 80%;">
+            <h1>HISTORIAS...</h1>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card">
+            <img src="img/people/paulina.jpeg" alt="paulina kaankun">
+            <p></p>
+            <a href="">Conoce más de su historia</a>
+          </div>
+          <div class="card">
+            <img src="img/people/laura.jpeg" alt="laura cancun">
+            <p></p>
+            <a href="">Conoce más de su historia</a>
+          </div>
+          <div class="card">
+            <img src="img/people/elsi.jpeg" alt="elsi kaankun">
+            <p></p>
+            <a href="">Conoce más de su historia</a>
+          </div>
+        </div>
+      </section>
+      <section id="section17" class="memory-section" data-scroll-section data-scroll-call="updateNav">
         <div class="images-column">
           <img src="img/memories/background-2030857_1280.jpg" alt="Image 1">
           <img src="img/memories/vintage-1817180_1280.jpg" alt="Image 2">
@@ -407,7 +417,7 @@
           </p>
         </div>
       </section>
-      <section id="section17" class="memory-section" data-scroll-section data-scroll-call="updateNav">
+      <section id="section18" class="memory-section" data-scroll-section data-scroll-call="updateNav">
         <div class="images-column">
           <img src="img/memories/background-2030857_1280.jpg" alt="Image 1">
           <img src="img/memories/vintage-1817180_1280.jpg" alt="Image 2">
@@ -442,7 +452,7 @@
           </p>
         </div>
       </section>
-      <section id="section18" data-scroll-section data-scroll-call="updateNav">
+      <section id="section19" data-scroll-section data-scroll-call="updateNav">
         <div class="row-cancun">
           <div class="two">
             <img src="img/el-ray-1235498_640.jpg" alt="">
@@ -459,7 +469,7 @@
         </div>
 
       </section>
-      <section id="section19" data-scroll-section data-scroll-call="updateNav">
+      <section id="sectionn20" data-scroll-section data-scroll-call="updateNav">
         <div class="component-container component-cover component-container--overlay">
           <div class="component-container component-cover" style="background-image: url('./img/slide10.jpeg');">
 
@@ -483,7 +493,12 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
   <script src="js/kaankun.js"></script>
+  <script src="js/lity.min.js"></script>
 
 </body>
 
