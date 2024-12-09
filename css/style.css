@@ -369,6 +369,8 @@ aside {
     flex: 2;
     padding-right: 30px;    
     color: #333;
+    height: 100vh;
+    overflow: scroll;
     
   }
   
@@ -398,7 +400,7 @@ aside {
   }
   
   .text-column p {
-     font-size: 1.8rem; 
+     font-size: 1.6rem; 
     line-height: 1.4;
     text-align: justify;
     margin-bottom: 15px;
@@ -415,12 +417,14 @@ aside {
   } 
   
 
+
 /* Card Container */
 .card-container {
   display: flex;
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
+  padding-bottom: 25px;
 }
 
 /* Individual Card Styling */
@@ -436,7 +440,8 @@ aside {
 
 .card img {
   width: 100%;
-  height: auto;
+  height: 80vh;
+  object-fit: cover;
   border-radius: 8px;
   margin-bottom: 15px;
 }
@@ -467,6 +472,11 @@ aside {
   background-color: #444444;
 }
 
+
+.lity-container
+{
+padding: 25px;
+}
   
 
   /* Content Wrapper */
